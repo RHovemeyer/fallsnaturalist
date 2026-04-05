@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falls Trail | Mullens, WV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        .swiper { width: 100%; max-width: 800px; height: auto; border-radius: 12px; }
+        .swiper-slide img { width: 100%; height: auto; display: block; border-radius: 8px; }
+        .hero-gradient { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('fall.png'); background-size: cover; background-position: center; }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 font-sans">
+
+    <header class="hero-gradient h-[60vh] flex flex-col items-center justify-center text-white px-4">
+        <h1 class="text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg text-center">Welcome to the Falls Trail</h1>
+        <p class="text-xl md:text-2xl font-light tracking-widest uppercase">Mullens, West Virginia</p>
+    </header>
+
+    <main class="max-w-4xl mx-auto py-16 px-6">
+        <section class="mb-16">
+            <h2 class="text-3xl font-semibold mb-6 border-b-2 border-green-700 pb-2">Nature’s Architecture</h2>
+            <p class="text-lg leading-relaxed mb-6">
+                Nestled in the rugged heart of Wyoming County, the Falls Trail offers an intimate encounter with the raw beauty of the Appalachian Highlands. The journey takes you through a landscape shaped by time and water, where the <strong>Marsh Fork</strong> and <strong>Black Fork</strong> falls serve as the trail’s twin crown jewels.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-10">
+                <div>
+                    <h3 class="text-xl font-bold mb-3 text-green-900">The Earth Beneath Your Feet</h3>
+                    <p class="leading-relaxed">
+                        The local soil here is primarily <strong>Gilpin-Dekalb</strong>, a stony, well-drained silt loam born from the ancient sandstone and shale of the mountains. This acidic, nutrient-rich earth is the secret architect of the lush environment, providing the <strong>adequate</strong> foundation needed for our towering hardwoods and dense undergrowth to thrive.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-3 text-green-900">Our Living Flora</h3>
+                    <p class="leading-relaxed">
+                        As you walk, you are surrounded by a diverse canopy of Sugar Maples, Tulip Poplars, and Eastern Hemlocks. The forest floor is a vibrant mosaic; keep an eye out for the iconic <strong>Great Rhododendron</strong>, which forms thick, evergreen tunnels along the creek banks.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-3xl font-semibold mb-6 text-center">Trail Gallery</h2>
+            <p class="text-center text-stone-500 mb-8 italic">Swipe right to explore the flora we identified on the trail.</p>
+            
+            <div class="swiper mySwiper shadow-2xl">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="image_6.png" alt="Vinca Minor"></div>
+                    <div class="swiper-slide"><img src="image_7.png" alt="Princess Pine"></div>
+                    <div class="swiper-slide"><img src="image_8.png" alt="Rhododendron"></div>
+                    <div class="swiper-slide"><img src="image_9.png" alt="Wood Fern"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev text-white"></div>
+                <div class="swiper-button-next text-white"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-stone-900 text-stone-400 py-10 text-center text-sm">
+        <p>&copy; 2026 Falls Trail Explorer | Wyoming County, WV</p>
+        <p class="mt-2 text-orange-400">Stay on the marked path. Wet sandstone is deceptively slick.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper(".mySwiper", {
+            loop: true,
+            pagination: { el: ".swiper-pagination", clickable: true },
+            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+        });
+    </script>
+</body>
+</html>
